@@ -9,6 +9,15 @@ APIs, con las cuales se pueda gestionar de manera eficiente la interacción del 
 Para la creación de las APIs y desarrollo del backend se utilizará el lenguaje de programación Python, con la librería Django es posible crear de manera  
 rápida y eficiente las funcionalidades necesarias en este proyecto.
 
-La API user, gestiona la creación de usuarios, los cuales pueden ser dentro del aplicativo clientes o desarrolladores, a su vez, tener un país de origen y  
-un historial de compras o registros, además de los datos personales. De esta manera se define un usuario, creando cuatro modelos y vistas que representan  
-a un usuario en sus aspectos, luego, las interacciones vienen con el resto de tablas y APIs.
+La API DAO_db administra todo el flujo de la base de datos, separando la lógica en 3 grandes aspectos, el usuario, el producto y la venta,  
+esto se ve reflejado por medio de comentarios en cada archivo dentro de la API.
+
+La configuración de la API está preestablecida para conectarse a una base de datos MySQL, no obstante, para conectarse por default  
+con la configuración de Django, por favor reemplazar la variable "DATABASES" dentro del archivo APIs.settings.py con la siguiente variable:
+
+DATABASES = {
+  'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': BASE_DIR / 'db.sqlite3',
+  }
+}
