@@ -1,10 +1,6 @@
-# Ecommerce_Project
+# Proyecto Modelos de Programación II
 
-## APIs
+## Ecommerce de Software
 
-Las APIs están en la carpeta con ese nombre dentro de la rama "test_APIs_Rest", para que te puedas ubicar sobre qué hice, te dejo los siguientes videos:
-
-https://www.youtube.com/watch?v=hL52_nB5QSw  
-https://www.youtube.com/watch?v=y89VHGofsDQ
-
-Cuando los veas te darás cuenta que falta seguir creando cada tabla como un modelo dentro del código y crear las relaciones entre tablas.
+La rama main aún no tiene cargada las APIs ni funcionalidades.  
+Dentro de la rama text_APIs_Rest está la carpeta APIs que contiene las APIs del proyecto correspondientes al DAO.
