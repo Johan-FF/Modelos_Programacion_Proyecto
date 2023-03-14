@@ -73,6 +73,11 @@ class UserView(View):
         return JsonResponse(data)
     
 class User_RolView(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+    
     def get(self, request, id_u_r=0):
         if id_u_r>0:
             rols = list(User_Rol.objects.filter(id=id_u_r).values())
@@ -120,6 +125,11 @@ class User_RolView(View):
         return JsonResponse(data)
 
 class CountryView(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+    
+    
     def get(self, request, id_c=0):
         if id_c>0:
             countrys = list(Country.objects.filter(id=id_c).values())
@@ -150,7 +160,7 @@ class CountryView(View):
         countrys = list(Country.objects.filter(id=id_c).values())
         if len(countrys)>0:
             country = Country.objects.get(id=id_c)
-            country.rol = jd['name']
+            country.name = jd['name']
             country.save()
             data = {'message': "Success"}
         else:
@@ -167,6 +177,11 @@ class CountryView(View):
         return JsonResponse(data)
 
 class HistoryView(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+    
+    
     def get(self, request, id_h=0):
         if id_h>0:
             historys = list(History.objects.filter(id=id_h).values())
